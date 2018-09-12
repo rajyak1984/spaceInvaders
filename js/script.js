@@ -1,14 +1,7 @@
 let canvas = document.getElementById("gameCanvas");
-let ctx;
+let ctx = canvas.getContext("2d");
 
-let drawImage = () => {
-        ctx = $("canvas")[0].getContext("2d"),
-        img = new Image();
+let img = new Image()
+img.src = './sprites/enemy.png'
 
-    img.onload = function () {
-        ctx.drawImage(img, 30, 30, 50, 50);
-    };
-    img.src = "http://www.pngmart.com/files/4/Space-Invaders-PNG-HD.png";
-}
-
-document.getElementById("button").addEventListener('click', (drawImage));
+ctx.drawImage(img, 20, 20, 20, 20)
